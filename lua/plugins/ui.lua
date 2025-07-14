@@ -21,4 +21,8 @@ return {
 		main = "ibl",
 		opts = {},
 	},
+	{
+		"stevearc/dressing.nvim",
+		opts = {},
+	},
 }
