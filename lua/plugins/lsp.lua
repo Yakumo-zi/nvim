@@ -15,6 +15,7 @@ return {
 				lua_ls = {},
 				clangd = {},
 				gopls = {},
+				pyright = {},
 			},
 		},
 		config = function(_, opts)
