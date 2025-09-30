@@ -134,7 +134,5 @@ return {
 	},
 	event = "LspAttach",
 	opts = {
-    backend = "delta",
-
   },
 }
