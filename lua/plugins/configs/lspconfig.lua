@@ -42,6 +42,6 @@ capabilities.textDocument.completion.completionItem = {
 }
 
 vim.lsp.config("*", { capabilities = capabilities })
-local servers = { "gopls", "lua_ls" }
+local servers = { "gopls", "lua_ls","clangd" }
 
 vim.lsp.enable(servers)
