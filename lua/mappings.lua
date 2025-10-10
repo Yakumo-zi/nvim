@@ -26,7 +26,4 @@ map("n", "<leader>/", "gcc", { remap = true })
 map("v", "<leader>/", "gc", { remap = true })
 
 -- format
-map("n", "<leader>fm", function()
-  require("conform").format()
-end)
-
+map("n", "<leader>fm", function() require("conform").format() end)

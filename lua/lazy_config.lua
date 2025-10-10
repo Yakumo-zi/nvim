@@ -1,3 +1,5 @@
 return {
-  install = { colorscheme = { "catppuccin" } },
+  install = { missing = false },
+  rocks = { enabled = false },
+  change_detection = { enabled = true, notify = false },
 }
