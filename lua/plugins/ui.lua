@@ -44,7 +44,7 @@ return {
     opts = function() require("plugins.configs.aerial") end,
     config = function(_, opts)
       require("aerial").setup(opts)
-      vim.keymap.set("n", "<F18>", "<cmd>AerialToggle<cr>", { silent = true })
+      vim.keymap.set("n", "<space>so", "<cmd>AerialToggle<cr>", { silent = true })
     end,
   },
 }
