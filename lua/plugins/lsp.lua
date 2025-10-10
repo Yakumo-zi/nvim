@@ -11,11 +11,16 @@ return {
   {
     "williamboman/mason-lspconfig.nvim",
     dependencies = "neovim/nvim-lspconfig",
-    opts = {
-      handlers = {
-        function(name) vim.lsp.enable(name) end,
-      },
-    },
+    opts = {},
+    config = function()
+      require("mason-lspconfig").setup({
+        automatic_enable = {
+          exclude = {
+            "rust_analyzer",
+          },
+        },
+      })
+    end,
   },
   {
     "folke/lazydev.nvim",
