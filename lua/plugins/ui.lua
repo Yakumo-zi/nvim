@@ -39,15 +39,12 @@ return {
       })
     end,
   },
-
   {
-    "mcauley-penney/match-visual.nvim",
-  },
-
-  {
-    "rareitems/hl_match_area.nvim",
-    opts = {
-      highlight_in_insert_mode = false,
-    },
+    "stevearc/aerial.nvim",
+    opts = function() require("plugins.configs.aerial") end,
+    config = function(_, opts)
+      require("aerial").setup(opts)
+      vim.keymap.set("n", "<F18>", "<cmd>AerialToggle<cr>", { silent = true })
+    end,
   },
 }

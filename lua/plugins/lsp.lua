@@ -26,38 +26,7 @@ return {
   {
     "j-hui/fidget.nvim",
     event = "LspAttach",
-    opts = {
-      progress = {
-        suppress_on_insert = true,
-        display = {
-          done_ttl = 2,
-          done_icon = tools.ui.icons.ok,
-          progress_icon = {
-            pattern = {
-              " 󰫃 ",
-              " 󰫄 ",
-              " 󰫅 ",
-              " 󰫆 ",
-              " 󰫇 ",
-              " 󰫈 ",
-            },
-          },
-          done_style = "Comment",
-          group_style = "Comment",
-          icon_style = "Comment",
-          progress_style = "Comment",
-        },
-      },
-      notification = {
-        window = {
-          border_hl = "Comment",
-          normal_hl = "Comment",
-          winblend = 100,
-          border = "solid",
-          relative = "win",
-        },
-      },
-    },
+    opts = function() require("plugins.configs.fidget") end,
   },
   {
     "Wansmer/symbol-usage.nvim",
