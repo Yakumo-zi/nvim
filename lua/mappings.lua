@@ -16,6 +16,7 @@ map("n", "<leader>fw", "<cmd> Telescope live_grep <CR>")
 map("n", "<leader>gt", "<cmd> Telescope git_status <CR>")
 map("n", "<leader>gr", "<cmd> Telescope lsp_references <CR>")
 map("n", "<leader>fd", "<cmd> Telescope diagnostics <CR>")
+map("n", "<leader>fb", "<cmd> Telescope buffers <CR>")
 
 -- bufferline, cycle buffers
 map("n", "<Tab>", "<cmd> BufferNext <CR>")
@@ -30,7 +31,7 @@ map("v", "<leader>/", "gc", { remap = true })
 map("n", "<leader>fm", function() require("conform").format() end)
 
 -- change window
-map({"n","t"},"<c-h>","<cmd> wincmd h<CR>")
-map({"n","t"},"<c-j>","<cmd> wincmd j<CR>")
-map({"n","t"},"<c-k>","<cmd> wincmd k<CR>")
-map({"n","t"},"<c-l>","<cmd> wincmd l<CR>")
+map({ "n", "t" }, "<c-h>", "<cmd> wincmd h<CR>")
+map({ "n", "t" }, "<c-j>", "<cmd> wincmd j<CR>")
+map({ "n", "t" }, "<c-k>", "<cmd> wincmd k<CR>")
+map({ "n", "t" }, "<c-l>", "<cmd> wincmd l<CR>")
