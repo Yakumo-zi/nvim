@@ -14,9 +14,9 @@ return {
     "bash",
     "python",
   },
+
   highlight = {
     enable = true,
-    use_languagetree = true,
   },
   indent = { enable = true },
   fold = { enable = false },

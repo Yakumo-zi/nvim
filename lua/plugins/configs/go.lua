@@ -1,7 +1,9 @@
 local M = {}
 
-function M.setup(opts)
-  require("go").setup(opts)
+function M.setup()
+  require("go").setup({
+    lsp_semantic_highlights = true,
+  })
   local format_sync_grp = vim.api.nvim_create_augroup("GoFormat", {})
   vim.api.nvim_create_autocmd("BufWritePre", {
     pattern = "*.go",

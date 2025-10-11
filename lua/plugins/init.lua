@@ -12,9 +12,17 @@ return {
   {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
-    opts = function() require("plugins.configs.treesitter") end,
-    config = function(_, opts) require("nvim-treesitter.configs").setup(opts) end,
+    config = function()
+      local opts = require("plugins.configs.treesitter")
+      require("nvim-treesitter.configs").setup(opts)
+    end,
   },
+  {
+    "nvim-treesitter/nvim-treesitter-textobjects",
+    dependencies = "nvim-treesitter/nvim-treesitter",
+    config = function() require("plugins.configs.textobjects") end,
+  },
+
   {
     "stevearc/conform.nvim",
     opts = require("plugins.configs.conform"),
