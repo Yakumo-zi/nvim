@@ -1,4 +1,4 @@
-require("nvim-treesitter.configs").setup({
+return {
   ensure_installed = {
     "lua",
     "vim",
@@ -14,10 +14,10 @@ require("nvim-treesitter.configs").setup({
     "bash",
     "python",
   },
-
   highlight = {
     enable = true,
     use_languagetree = true,
   },
   indent = { enable = true },
-})
+  fold = { enable = false },
+}
