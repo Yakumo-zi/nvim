@@ -19,6 +19,8 @@ configs.setup({
           query_group = "locals",
           desc = "Select language scope",
         },
+        ["id"]="@conditional.inner",
+        ["ad"]="@conditional.outer"
       },
       selection_modes = {
         ["@parameter.outer"] = "v", -- charwise
