@@ -44,7 +44,22 @@ return {
     opts = function() require("plugins.configs.aerial") end,
     config = function(_, opts)
       require("aerial").setup(opts)
-      vim.keymap.set("n", "<space>so", "<cmd>AerialToggle<cr>", { silent = true })
+      vim.keymap.set(
+        "n",
+        "<space>so",
+        "<cmd>AerialToggle<cr>",
+        { silent = true }
+      )
+    end,
+  },
+  {
+    "rcarriga/nvim-notify",
+    event = "VimEnter",
+    config = function()
+      require("notify").setup({
+        fps = 60,
+      })
+      vim.notify = require("notify")
     end,
   },
 }
