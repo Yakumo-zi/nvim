@@ -8,6 +8,7 @@
   "fidget.nvim": { "branch": "main", "commit": "3f5475949679953af6d78654db29b944fa826e6a" },
   "flash.nvim": { "branch": "main", "commit": "2febce67ff9cf7638d2569d17c41af02c38401eb" },
   "friendly-snippets": { "branch": "main", "commit": "572f5660cf05f8cd8834e096d7b4c921ba18e175" },
+  "git-blame.nvim": { "branch": "master", "commit": "54da04264ec5313d602aebea7c5dc90141696ad7" },
   "gitsigns.nvim": { "branch": "main", "commit": "23ae90a2a52fdc9b8c50dc61d6c30ebb18521343" },
   "go.nvim": { "branch": "master", "commit": "45526446280a570a10c76dc9a4acfaa7dcd982c4" },
   "guihua.lua": { "branch": "master", "commit": "c49a0fb7346586a1b1431d7e407f943c4164d8cb" },
