@@ -67,7 +67,7 @@ return {
     event = "VeryLazy",
     opts = {
       enabled = true,
-      message_template = " <summary> • <date> • <author> • <<sha>>",
+      message_template = " <summary> • <date> • <author>",
       date_format = "%Y-%m-%d %r",
       virtual_text_column = 1,
     },
