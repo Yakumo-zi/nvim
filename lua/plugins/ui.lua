@@ -40,17 +40,13 @@ return {
     end,
   },
   {
-    "stevearc/aerial.nvim",
-    opts = function() require("plugins.configs.aerial") end,
-    config = function(_, opts)
-      require("aerial").setup(opts)
-      vim.keymap.set(
-        "n",
-        "<space>so",
-        "<cmd>AerialToggle<cr>",
-        { silent = true }
-      )
-    end,
+    "hedyhli/outline.nvim",
+    lazy = true,
+    cmd = { "Outline", "OutlineOpen" },
+    keys = {
+      { "<leader>so", "<cmd>Outline<CR>", desc = "Toggle outline" },
+    },
+    opts = {},
   },
   {
     "rcarriga/nvim-notify",
