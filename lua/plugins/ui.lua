@@ -64,7 +64,10 @@ return {
   },
   {
     "f-person/git-blame.nvim",
-    event = "VeryLazy",
+    lazy = false,
+    keys = {
+      { "<leader>gb", "<cmd>GitBlameToggle<CR>", desc = "GitBlameToogle" },
+    },
     opts = {
       enabled = true,
       message_template = " <summary> • <date> • <author>",
