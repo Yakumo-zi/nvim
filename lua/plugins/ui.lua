@@ -60,7 +60,7 @@ return {
   },
   {
     "f-person/git-blame.nvim",
-    lazy = false,
+    lazy = true,
     keys = {
       { "<leader>gb", "<cmd>GitBlameToggle<CR>", desc = "GitBlameToogle" },
     },
