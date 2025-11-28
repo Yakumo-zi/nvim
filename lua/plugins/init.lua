@@ -57,8 +57,12 @@ return {
       { "<leader>pb", "<cmd>FzfLua buffers<cr>", desc = "Buffers" },
       { "<leader>ph", "<cmd>FzfLua help_tags<cr>", desc = "Help" },
       -- 替代 LSP 功能
-      { "Gd", "<cmd>FzfLua lsp_definitions<cr>", desc = "Go to Definition" },
-      { "Gr", "<cmd>FzfLua lsp_references<cr>", desc = "References" },
+      {
+        "<leader>pd",
+        "<cmd>FzfLua lsp_definitions<cr>",
+        desc = "Go to Definition",
+      },
+      { "<leader>pr", "<cmd>FzfLua lsp_references<cr>", desc = "References" },
       {
         "<leader>ca",
         "<cmd>FzfLua lsp_code_actions<cr>",

@@ -29,3 +29,42 @@ vim.api.nvim_create_autocmd("LspAttach", {
 
 -- 1. 缩短悬停触发时间
 vim.o.updatetime = 300
+
+-- 自动切换根目录 (Auto-Root)
+-- 逻辑：当打开文件时，向上寻找 .git 或 go.mod，如果找到就切换过去
+local root_names = {
+  ".git",
+  "go.mod",
+  "Makefile",
+  "package.json",
+  ".luarc.json",
+  "CMakeLists.txt",
+}
+
+-- 缓存以避免重复查找
+local root_cache = {}
+
+local set_root = function()
+  -- 获取当前文件路径
+  local path = vim.api.nvim_buf_get_name(0)
+  if path == "" then return end
+  path = vim.fs.dirname(path)
+
+  -- 尝试从缓存获取
+  local root = root_cache[path]
+  if root == nil then
+    -- 使用 Neovim 内置的 fs.find 向上查找
+    local root_file = vim.fs.find(root_names, { path = path, upward = true })[1]
+    if root_file then
+      root = vim.fs.dirname(root_file)
+      root_cache[path] = root
+    end
+  end
+
+  if root and root ~= vim.fn.getcwd() then
+    vim.cmd.cd(root)
+    vim.notify("Root changed to " .. root)
+  end
+end
+
+vim.api.nvim_create_autocmd("BufEnter", { callback = set_root })
