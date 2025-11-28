@@ -24,11 +24,8 @@ vim.api.nvim_create_autocmd("LspAttach", {
       function() vim.lsp.buf.hover({ border = "rounded" }) end,
       opts
     )
-    vim.keymap.set(
-      { "n", "x" },
-      "<space>ca",
-      function() require("tiny-code-action").code_action() end,
-      { noremap = true, silent = true }
-    )
   end,
 })
+
+-- 1. 缩短悬停触发时间
+vim.o.updatetime = 300

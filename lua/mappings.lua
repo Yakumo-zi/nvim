@@ -9,15 +9,6 @@ map("n", "<C-c>", "<cmd> %y+ <CR>") -- copy whole filecontent
 map("n", "<C-n>", "<cmd> NvimTreeToggle <CR>")
 map("n", "<leader>e", "<cmd> NvimTreeFocus <CR>")
 
--- telescope
-map("n", "<leader>ff", "<cmd> Telescope find_files <CR>")
-map("n", "<leader>fo", "<cmd> Telescope oldfiles <CR>")
-map("n", "<leader>fw", "<cmd> Telescope live_grep <CR>")
-map("n", "<leader>gt", "<cmd> Telescope git_status <CR>")
-map("n", "<leader>gr", "<cmd> Telescope lsp_references <CR>")
-map("n", "<leader>fd", "<cmd> Telescope diagnostics <CR>")
-map("n", "<leader>fb", "<cmd> Telescope buffers <CR>")
-
 -- bufferline, cycle buffers
 map("n", "<Tab>", "<cmd> BufferNext <CR>")
 map("n", "<S-Tab>", "<cmd> BufferPrevious <CR>")

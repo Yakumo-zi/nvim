@@ -13,13 +13,4 @@ return {
       vim.diagnostic.config({ virtual_text = false }) -- Disable default virtual text
     end,
   },
-  {
-    "rachartier/tiny-code-action.nvim",
-    dependencies = {
-      { "nvim-lua/plenary.nvim" },
-      { "nvim-telescope/telescope.nvim" },
-    },
-    event = "LspAttach",
-    opts = {},
-  },
 }
