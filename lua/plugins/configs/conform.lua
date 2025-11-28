@@ -8,5 +8,7 @@ return {
     ["javascript"] = { "prettier" },
     ["javascriptreact"] = { "prettier" },
     ["typescript"] = { "prettier" },
+    ["python"] = { "ruff" },
+    ["json"]={"prettier"}
   },
 }
