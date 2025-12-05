@@ -7,31 +7,57 @@ return {
   },
   {
     "neovim/nvim-lspconfig",
-  },
-  {
-    "williamboman/mason-lspconfig.nvim",
-    dependencies = "neovim/nvim-lspconfig",
-    opts = {},
+    dependencies = {
+      "williamboman/mason-lspconfig.nvim",
+      "folke/lazydev.nvim",
+      "j-hui/fidget.nvim",
+    },
     config = function()
-      require("mason-lspconfig").setup({
-        automatic_enable = {
-          exclude = {
-            "rust_analyzer",
-          },
+      local lspconfig = require("lspconfig")
+      local mason_lspconfig = require("mason-lspconfig")
+
+      -- Note: blink.cmp provides capabilities for LSP to enable autocompletion support
+      local capabilities = require("blink.cmp").get_lsp_capabilities()
+
+      local servers = {
+        "clangd",
+        "lua_ls",
+      }
+
+      mason_lspconfig.setup({
+        ensure_installed = servers,
+        automatic_installation = false,
+        handlers = {
+          function(server_name)
+            local opts = {
+              capabilities = capabilities,
+            }
+
+            -- Attempt to load server-specific configuration from lua/lsp/<server_name>.lua
+            local require_ok, settings = pcall(require, "lsp." .. server_name)
+            if require_ok then
+              opts = vim.tbl_deep_extend("force", settings, opts)
+            end
+
+            lspconfig[server_name].setup(opts)
+          end,
         },
       })
     end,
   },
   {
     "folke/lazydev.nvim",
-    dependencies = "neovim/nvim-lspconfig",
     ft = "lua",
-    opts = true,
+    opts = {
+      library = {
+        { path = "${3rd}/luv/library", words = { "vim%.uv" } },
+      },
+    },
   },
   {
     "j-hui/fidget.nvim",
     event = "LspAttach",
-    opts = function() require("plugins.configs.fidget") end,
+    opts = function() return require("plugins.configs.fidget") end,
   },
   {
     "Wansmer/symbol-usage.nvim",
