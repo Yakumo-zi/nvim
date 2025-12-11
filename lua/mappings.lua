@@ -5,10 +5,6 @@ map("n", "<C-s>", "<cmd> w <CR>")
 map("i", "jk", "<ESC>")
 map("n", "<C-c>", "<cmd> %y+ <CR>") -- copy whole filecontent
 
--- nvimtree
-map("n", "<C-n>", "<cmd> NvimTreeToggle <CR>")
-map("n", "<leader>e", "<cmd> NvimTreeFocus <CR>")
-
 -- bufferline, cycle buffers
 map("n", "<Tab>", "<cmd> BufferNext <CR>")
 map("n", "<S-Tab>", "<cmd> BufferPrevious <CR>")

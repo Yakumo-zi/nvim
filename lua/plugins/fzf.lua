@@ -26,6 +26,7 @@ return {
       { "<leader>ph", "<cmd>FzfLua help_tags<cr>", desc = "Help" },
       { "<leader>pd", "<cmd>FzfLua lsp_definitions<cr>", desc = "Go to Definition" },
       { "<leader>pr", "<cmd>FzfLua lsp_references<cr>", desc = "References" },
+      { "<leader>pk", "<cmd>FzfLua keymaps<cr>", desc = "Keymaps" },
       { "<leader>ca", "<cmd>FzfLua lsp_code_actions<cr>", desc = "Code Actions" },
     },
   },
