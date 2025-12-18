@@ -21,4 +21,4 @@ require("mappings")
 require("commands")
 require("autocmd")
 
-vim.cmd("colorscheme catppuccin-latte")
+vim.cmd("colorscheme catppuccin-frappe")
