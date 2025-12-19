@@ -14,9 +14,6 @@ map("n", "<C-q>", "<cmd> bd <CR>")
 map("n", "<leader>/", "gcc", { remap = true })
 map("v", "<leader>/", "gc", { remap = true })
 
--- format
-map("n", "<leader>fm", function() require("conform").format() end)
-
 -- change window
 map({ "n", "t" }, "<c-h>", "<cmd> wincmd h<CR>")
 map({ "n", "t" }, "<c-j>", "<cmd> wincmd j<CR>")

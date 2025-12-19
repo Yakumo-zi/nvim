@@ -1,6 +1,14 @@
 return {
   {
     "stevearc/conform.nvim",
+    cmd = { "ConformInfo" },
+    keys = {
+      {
+        "<leader>fm",
+        function() require("conform").format({ lsp_fallback = true }) end,
+        desc = "Format Files",
+      },
+    },
     opts = {
       formatters_by_ft = {
         ["lua"] = { "stylua" },
