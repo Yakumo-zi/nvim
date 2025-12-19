@@ -4,6 +4,7 @@ local map = vim.keymap.set
 map("n", "<C-s>", "<cmd> w <CR>")
 map("i", "jk", "<ESC>")
 map("n", "<C-c>", "<cmd> %y+ <CR>") -- copy whole filecontent
+map("n", "<leader>ep", "<cmd>edit ~/.config/nvim/init.lua <CR>", { remap = true })
 
 -- bufferline, cycle buffers
 map("n", "<Tab>", "<cmd> BufferNext <CR>")
