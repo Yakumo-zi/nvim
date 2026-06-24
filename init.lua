@@ -1,0 +1,11 @@
+require("core")
+require("plugins")
+require("formatter")
+require("vim-override")
+require("tree-sitter")
+require("keymap")
+require("auto-commands")
+require("lsp-setup")
+require("blink")
+
+vim.cmd.colorscheme("catppuccin-latte")
