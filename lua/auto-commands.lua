@@ -23,3 +23,15 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		end, opts)
 	end,
 })
+
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = {
+		"html",
+		"javascriptreact",
+		"typescriptreact",
+	},
+	callback = function()
+		require("nvim-ts-autotag").setup({})
+	end,
+	once = true,
+})

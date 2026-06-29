@@ -15,6 +15,10 @@ require("nvim-treesitter").install({
 	"svelte",
 	"css",
 	"html",
+	"tsx",
+	"json",
+	"jsonc",
+	"regex",
 })
 
 vim.api.nvim_create_autocmd("FileType", {
@@ -31,6 +35,10 @@ vim.api.nvim_create_autocmd("FileType", {
 		"svelte",
 		"css",
 		"html",
+		"javascriptreact",
+		"typescriptreact",
+		"json",
+		"jsonc",
 	},
 	callback = function(args)
 		pcall(vim.treesitter.start, args.buf)

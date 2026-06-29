@@ -11,7 +11,19 @@ vim.pack.add({
 	{ src = "https://github.com/saghen/blink.lib" },
 	{ src = "https://github.com/saghen/blink.cmp", version = "v1.10.2" },
 	{ src = "https://github.com/rafamadriz/friendly-snippets" },
+	{ src = "https://github.com/windwp/nvim-ts-autotag" },
+})
+vim.pack.add({
+	{ src = "https://github.com/nvim-lua/plenary.nvim" },
+	{ src = "https://github.com/mikavilpas/yazi.nvim" },
 })
 
 require("mini.pairs").setup()
 require("mini.statusline").setup()
+
+require("yazi").setup({
+	open_for_directories = false,
+	keymaps = {
+		show_help = "<f1>",
+	},
+})

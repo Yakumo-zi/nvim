@@ -10,4 +10,8 @@ vim.lsp.enable({
 	"ts_ls",
 	"clangd",
 	"gopls",
+	"jsonls",
+	"html",
+	"cssls",
+	"eslint",
 })

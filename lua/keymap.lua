@@ -67,3 +67,15 @@ vim.keymap.set("i", "<A-e>", "<End>", { noremap = true, desc = "Line end" })
 
 vim.keymap.set("v", ">", ">gv")
 vim.keymap.set("v", "<", "<gv")
+
+vim.keymap.set({ "n", "v" }, "<leader>-", "<cmd>Yazi<CR>", {
+	desc = "Open yazi at current file",
+})
+
+vim.keymap.set("n", "<leader>cw", "<cmd>Yazi cwd<CR>", {
+	desc = "Open yazi in cwd",
+})
+
+vim.keymap.set("n", "<leader>e", "<cmd>Yazi toggle<CR>", {
+	desc = "Resume yazi",
+})
