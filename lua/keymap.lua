@@ -1,7 +1,6 @@
 local terminal = require("terminal")
 local buffer = require("buffer")
 
-vim.keymap.set("n", "<leader>e", "<cmd>Explore<cr>")
 vim.keymap.set("n", "<leader>b", "<cmd>buffers<cr>:buffer ")
 vim.keymap.set("n", "<leader>so", "<cmd>source<cr>")
 vim.keymap.set("n", "<leader>Q", "<cmd>wq<cr>")
