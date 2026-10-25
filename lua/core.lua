@@ -10,6 +10,7 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.termguicolors = true
 vim.opt.signcolumn = "yes"
+vim.opt.cursorline = true
 vim.opt.updatetime = 300
 vim.opt.scrolloff = 8
 vim.opt.expandtab = true

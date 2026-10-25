@@ -1,7 +1,9 @@
 local cmp = require("blink.cmp")
 cmp.setup({
 	keymap = {
-		preset = "default",
+		preset = "super-tab",
+		-- Accept the selected completion item with Enter
+		["<CR>"] = { "accept", "fallback" },
 		-- Stop snippet session on Esc, then fall through to default hide/exit behavior
 		["<Esc>"] = {
 			function()

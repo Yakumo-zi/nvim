@@ -35,6 +35,13 @@ end, { desc = "Line diagnostic" })
 vim.keymap.set("n", "[b", "<cmd>BufferPrevious<cr>")
 vim.keymap.set("n", "]b", "<cmd>BufferNext<cr>")
 
+vim.keymap.set({ "n", "v" }, "<leader>fm", function()
+	local ok = require("conform").format({ async = true, lsp_format = "fallback" })
+	if not ok then
+		vim.lsp.buf.format({ async = true })
+	end
+end, { desc = "Format buffer / range" })
+
 vim.keymap.set("n", "<leader>gw", function()
 	local word = vim.fn.expand("<cword>")
 	vim.cmd("silent grep! -w -- " .. vim.fn.shellescape(word) .. " .")

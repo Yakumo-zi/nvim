@@ -8,4 +8,4 @@ require("auto-commands")
 require("lsp-setup")
 require("blink")
 
-vim.cmd.colorscheme("catppuccin-frappe")
+vim.cmd.colorscheme("catppuccin-latte")

@@ -5,6 +5,7 @@ vim.pack.add({ "https://github.com/lewis6991/gitsigns.nvim" })
 vim.pack.add({ "https://github.com/romgrk/barbar.nvim" })
 vim.pack.add({ "https://github.com/stevearc/conform.nvim" })
 vim.pack.add({ { src = "https://github.com/catppuccin/nvim", name = "catppuccin" } })
+vim.pack.add({ "https://github.com/morhetz/gruvbox" })
 vim.pack.add({ "https://github.com/nvim-treesitter/nvim-treesitter" })
 vim.pack.add({
 	{ src = "https://github.com/neovim/nvim-lspconfig" },
